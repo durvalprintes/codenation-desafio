@@ -25,16 +25,6 @@ async function score() {
     const config = { headers: form.getHeaders() }
     const score = await axios.post(url, form, config);
     console.log(score.data);
-    // form.pipe(concat(async answer => {
-    //   try {
-    //     const url = `https://api.codenation.dev/v1/challenge/dev-ps/submit-solution?token=${token}`;
-    //     const config = { headers: form.getHeaders() }
-    //     const { data } = await axios.post(url, answer, config);
-    //     console.log(data);
-    //   } catch (error) {
-    //     console.error(error);
-    //   }
-    // }));
   } catch (error) {
     console.error(error);
   }
